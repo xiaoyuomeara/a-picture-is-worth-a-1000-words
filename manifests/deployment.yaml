@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fsfsf
+  labels:
+    app: fsfsf
+  namespace: namespace-workflow-1688775889632
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fsfsf
+  template:
+    metadata:
+      labels:
+        app: fsfsf
+    spec:
+      containers:
+        - name: fsfsf
+          image: acrworkflow1688775889632.azurecr.io/image-workflow-1688775889632:latest
+          ports:
+            - containerPort: 3000
